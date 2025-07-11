@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter/Colab
+.ipynb_checkpoints/
+*.ipynb_checkpoints*
+
+# Models/Data (exclude large files)
+*.joblib
+*.pkl
+/data/
+
+# Secrets
+.env
+*.key
+credentials.json
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
