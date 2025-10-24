@@ -45,8 +45,8 @@ def clean_tweet(tweet):
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 tfidf = TfidfVectorizer(
-    max_features=5000,
-    stop_words='english'
+    max_features=15000,
+    stop_words='ENGLISH_STOP_WORDS'
 )
 X = tfidf.fit_transform(cleaned_tweets)
 ```
@@ -56,12 +56,13 @@ X = tfidf.fit_transform(cleaned_tweets)
 ### Classification Report
 | Class      | Precision | Recall | F1-Score | Support |
 |------------|-----------|--------|----------|---------|
-| Negative   | 0.75      | 0.76   | 0.75     | 160000    |
-| Positive   | 0.75      | 0.75   | 0.75     | 160000    |
+| Negative   | 0.77      | 0.83   | 0.79     | 266     |
+| Neutral    | 0.85      | 0.81   | 0.83     | 457     |
+| Positive   | 0.83      | 0.82   | 0.82     | 277     |
 |            |           |        |          |         |
-| **Accuracy** |          |        | **0.75** | 320000    |
-| **Macro Avg** | 0.75    | 0.75   | 0.75     | 320000    |
-| **Weighted Avg** | 0.75 | 0.75   | 0.75     | 320000    |
+| **Accuracy** |          |        | **0.82** | 1000    |
+| **Macro Avg** | 0.81    | 0.82   | 0.82     | 1000    |
+| **Weighted Avg** | 0.82 | 0.82   | 0.82     | 1000    |
 
 Key:
 - **Precision**: Percentage of correct positive predictions
